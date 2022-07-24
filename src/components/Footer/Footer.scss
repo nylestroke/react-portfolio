@@ -1,0 +1,101 @@
+@import '../../styles/variables';
+
+#down {
+  background-color: $mainColor;
+  color: white;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .union {
+    position: absolute;
+    right: 0;
+  }
+
+  > h3, .social-media {
+    margin-bottom: 30px;
+  }
+
+  h3 {
+    font-weight: 600;
+    font-size: 18px;
+  }
+
+  span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+
+    > * {
+      margin-right: 6px;
+      margin-left: 6px;
+    }
+    .copyright {
+      font-size: 12px;
+      display: flex;
+      background-color: $secondaryColor;
+      color: $mainColor;
+      padding-top: 4px;
+      padding-right: 2px;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      font-weight: 600;
+    }
+    .heart {
+      color: red;
+    }
+  }
+
+  .social-media {
+    display: flex;
+
+    a {
+      margin-right: 20px;
+      width: 34px;
+      display: flex;
+      font-size: 34px;
+      justify-content: center;
+      align-items: center;
+      height: 34px;
+      color: $mainColor;
+      padding-inline: 6px;
+      background-color: $secondaryColor;
+      border-radius: 50%;
+
+      &:hover {
+        color: #071e3f;
+        transition: .8s all;
+
+        > * {
+          padding-inline: 1px;
+          transition: .8s all;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #down {
+    .union {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 420px) {
+  #down {
+    span {
+      display: flex;
+      flex-direction: column;
+      .copyright {
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+    }
+  }
+}

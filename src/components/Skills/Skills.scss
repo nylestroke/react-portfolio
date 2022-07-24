@@ -1,0 +1,144 @@
+@import '../../styles/_variables';
+
+#skills {
+  margin-top: 150px;
+  display: flex;
+  justify-content: space-around;
+
+  .union {
+    height: 1200px;
+    position: absolute;
+    right: 0;
+    top: 1276.01px;
+    z-index: -1;
+  }
+
+  .info {
+    width: 616px;
+    margin-left: 80px;
+    h2 {
+      font-size: $headerFontsize;
+      color: $headerColor;
+    }
+
+    span.bio {
+      font-size: $fontsize;
+    }
+
+    > * {
+      padding-bottom: 30px;
+    }
+  }
+
+  .languages {
+    padding-top: 30px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+
+    .lang-item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-right: 60px;
+      padding-bottom: 20px;
+
+
+      .bar {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        > .svgBar {
+          position: absolute;
+        }
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: $smallestFontsize;
+        color: $secondaryColor;
+      }
+      span {
+        color: black;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 16px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  #skills {
+    margin-bottom: 110px;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    img.photo {
+      width: 50%;
+    }
+    .union {
+      top: 1550px;
+      z-index: -2;
+    }
+    .info {
+      margin: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 760px) {
+  #skills {
+    .union {
+      width: 400px;
+      height: 900px;
+      top: 1900px;
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  #skills {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    .info {
+      width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+
+      .languages {
+        margin-left: auto;
+        margin-right: auto;
+        grid-template-columns: auto auto;
+        .lang-item {
+          padding-bottom: 10px;
+          padding-right: 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 580px) {
+  #skills {
+    .union {
+      width: 60%;
+      height: 80%;
+      top: 1700px;
+    }
+  }
+}
+
+@media screen and(max-width: 420px) {
+  #skills {
+    width: 280px;
+    .info {
+      width: 280px;
+    }
+  }
+}

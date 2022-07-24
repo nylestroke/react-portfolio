@@ -1,0 +1,270 @@
+@import '../../styles/_variables';
+
+#works {
+  margin: 120px 120px;
+  margin-bottom: 180px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  .union {
+    position: absolute;
+    left: 0;
+    margin-top: 240px;
+    z-index: -1;
+  }
+
+
+  .work-img {
+    position: relative;
+    width: 585px;
+    height: 688px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+
+    .photo {
+      width: 90%;
+      height: 100%;
+    }
+
+    .arrow {
+      position: absolute;
+      right: 30px;
+      color: white;
+      background-color: $secondaryColor;
+      padding: 12px 30px;
+      border-top-left-radius: 24px;
+      border-bottom-left-radius: 24px;
+      cursor: pointer;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .3s ease;
+
+      &[data-display=true] {
+        opacity: 1;
+        pointer-events: all;
+      }
+    }
+
+    .arrowLeft {
+      position: absolute;
+      left: 80px;
+      color: white;
+      background-color: $secondaryColor;
+      padding: 12px 30px;
+      border-top-right-radius: 24px;
+      border-bottom-right-radius: 24px;
+      cursor: pointer;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .3s ease;
+
+      &[data-display=true] {
+        opacity: 1;
+        pointer-events: all;
+      }
+    }
+  }
+
+  .information {
+    width: 617px;
+
+    .slider {
+      --offset: 0;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+
+      .element {
+        width: 617px;
+        flex-shrink: 0;
+
+        h3 {
+          margin-bottom: 18px;
+        }
+
+        &:first-child {
+          margin-left: calc(var(--offset) * -617px);
+          transition: margin-left .4s ease-in-out;
+        }
+      }
+    }
+
+    > * {
+      padding-bottom: 24px;
+    }
+
+    h2 {
+      font-size: $headerFontsize;
+      color: $headerColor;
+      font-weight: 700;
+    }
+
+    h3 {
+      font-size: $fontsize !important;
+      color: $headerColor;
+      font-weight: 600;
+    }
+
+    span#info {
+      font-weight: 400;
+      font-size: $fontsize;
+    }
+
+    .lang-block {
+      padding-top: 30px;
+      display: flex;
+      margin-bottom: 20px;
+
+      p {
+        padding: 10px;
+        color: white;
+        margin-right: 20px;
+        border-radius: 4px;
+        background-color: $secondaryColor;
+      }
+    }
+
+    .gh-link {
+      > * {
+        font-size: 32px;
+      }
+    }
+
+    .progress-bar {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      margin-top: 20px;
+
+      .bar {
+        flex: 1;
+        height: 6px;
+        background-color: $swiperColor;
+        transition: background-color .2s ease;
+
+        &[data-active=true] {
+          background-color: $mainColor;
+        }
+      }
+    }
+
+    #number {
+      position: absolute;
+      font-size: 14px;
+      font-weight: 600;
+    }
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  #works {
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  #works {
+    margin-top: 100px;
+    flex-direction: column;
+
+    .photo {
+      padding-bottom: 30px;
+    }
+
+    .union {
+      margin-top: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #works {
+    .union {
+      margin: 0 !important;
+      margin-top: -140px !important;
+    }
+
+    .work-img {
+        width: 375px;
+      .photo {
+        height: 70%;
+      }
+
+      .arrow {
+        right: 18px;
+      }
+      .arrowLeft {
+        left: 50px;
+      }
+    }
+
+    .information {
+      width: 375px;
+      padding-top: 20px;
+
+      .slider {
+        .element {
+          width: 375px;
+
+          &:first-child {
+            margin-left: calc(var(--offset) * -375px);
+          }
+        }
+      }
+      .lang-block {
+        display: grid;
+        grid-template-columns: auto auto;
+        p {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 420px) {
+  #works {
+    margin-left: auto;
+    margin-right: auto;
+
+    .work-img {
+      .photo {
+        width: 85%;
+        height: 70%;
+      }
+
+      .arrow {
+        right: 28px;
+      }
+      .arrowLeft {
+        left: 58px;
+      }
+    }
+
+    .union {
+      margin: 0 !important;
+      margin-top: -300px !important;
+    }
+
+    .information {
+      width: 220px;
+      margin-left: auto;
+      margin-right: auto;
+
+      .lang-block {
+        display: grid;
+        grid-template-columns: auto auto;
+
+        p {
+          margin-bottom: 12px;
+        }
+      }
+      .lang-block {
+        grid-template-columns: auto;
+      }
+    }
+  }
+}

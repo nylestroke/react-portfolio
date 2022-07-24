@@ -1,0 +1,115 @@
+@import '../../styles/_variables';
+
+#contact {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  background: url("../../img/footerBackground.png");
+  padding: 70px;
+
+  span {
+    font-weight: 600;
+    font-size: 38px;
+    width: 428px;
+  }
+
+  .contact-form {
+    background-color: white;
+    display: flex;
+    padding: 32px;
+    justify-content: space-around;
+    align-items: center;
+
+    form {
+      position: relative;
+      h2 {
+        color: $headerColor;
+        font-size: $headerFontsize;
+      }
+      display: flex;
+      flex-direction: column;
+      input {
+        width: 690px;
+        height: 52px;
+        font-size: 20px;
+      }
+      textarea {
+        font-size: 20px;
+        height: 125px;
+        padding-top: 6px;
+        padding-left: 2px;
+        resize: none;
+      }
+      button {
+        width: 173px;
+        height: 53px;
+        background-color: $mainColor;
+        color: white;
+        border-radius: 4px;
+        cursor: pointer;
+        pointer-events: all;
+        transition: background-color .2s ease, color .2s ease;
+        &:disabled {
+          background-color: $secondaryColor;
+          border: none;
+          font-weight: 500;
+          pointer-events: none;
+        }
+      }
+      > * {
+        margin-bottom: 24px;
+      }
+      #success {
+        right: 0;
+        bottom: 0;
+        position: absolute;
+        color: $headerColor;
+        font-weight: 500;
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #contact {
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      span {
+        font-size: 28px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #contact {
+    .contact-form {
+      span {
+        width: 380px;
+      }
+      form {
+        justify-content: center;
+        align-items: center;
+        input {
+          width: 90%;
+        }
+        textarea {
+          width: 90%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 480px) {
+  #contact {
+    .contact-form {
+      span {
+        width: 200px;
+      }
+    }
+  }
+}

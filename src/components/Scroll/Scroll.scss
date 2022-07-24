@@ -1,0 +1,17 @@
+@import '../../styles/_variables';
+
+a.scroll {
+  color: $secondaryColor;
+  display: flex;
+  font-size: $smallestFontsize;
+  font-weight: 500;
+  vertical-align: middle;
+  align-items: center;
+  margin-top: -100px;
+  padding-left: 111px;
+
+  > * {
+    padding-inline: 2px;
+    margin-right: 0.15em;
+  }
+}

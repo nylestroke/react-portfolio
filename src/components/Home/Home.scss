@@ -1,0 +1,83 @@
+@import '../../styles/_variables';
+
+
+#home {
+  background: url("../../img/heroUnion.png") no-repeat;
+  height: 826px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 111px;
+
+  .name {
+    font-size: 38px;
+    color: $mainColor;
+    text-stroke: 2px black;
+    -webkit-text-stroke: 1px white;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    margin-bottom: 18px;
+  }
+
+  .bio {
+    font-size: $fontsize;
+    color: white;
+    margin-bottom: 18px;
+  }
+
+  .social {
+    display: flex;
+
+    a {
+      margin-right: 20px;
+      width: 34px;
+      display: flex;
+      font-size: 34px;
+      justify-content: center;
+      align-items: center;
+      height: 34px;
+      color: $mainColor;
+      padding-inline: 6px;
+      background-color: $secondaryColor;
+      border-radius: 50%;
+      &:hover {
+        color: #071e3f;
+        transition: .8s all;
+        > * {
+          padding-inline: 1px;
+          transition: .8s all;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #home {
+    padding-left: 0;
+    align-items: center;
+
+    .bio {
+      font-size: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #home {
+    background-size: cover;
+    background-position: center center;
+  }
+}
+
+@media screen and (max-width: 310px) {
+  #home {
+    .name, .bio {
+      width: 200px;
+      font-size: 18px;
+    }
+    .social {
+      width: 200px;
+    }
+  }
+}

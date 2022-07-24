@@ -1,0 +1,102 @@
+@import '../../styles/_variables';
+
+#about {
+  padding: 108px 80px;
+  width: 100%;
+
+  .union {
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 300px;
+    width: 1030px;
+  }
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  .about {
+    margin-left: 80px;
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+
+    > * {
+      padding-bottom: 30px;
+    }
+
+    h2 {
+      font-size: $headerFontsize;
+      color: $headerColor;
+      font-weight: 700;
+    }
+
+    span {
+      font-size: $fontsize;
+    }
+
+    a {
+      font-size: $mediumFontsize;
+      background-color: $mainColor;
+      width: 170px;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      padding: 16px;
+      color: white;
+      border-radius: 3px;
+      margin-bottom: 32px;
+    }
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  #about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    > .about {
+      margin-top: 30px;
+      margin-left: 0;
+      width: 80%;
+    }
+
+    .union {
+      width: 830px;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #about {
+    .union {
+      width: 500px;
+      top: 600px;
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  #about {
+    img {
+      width: 85%;
+    }
+
+    .union {
+      width: 300px;
+      top: 670px;
+    }
+  }
+}
+
+@media screen and (max-width: 300px) {
+  #about {
+    .about {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
